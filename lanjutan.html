@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-Belajar Vue.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <!-- vue instance -->
+    <div id="vue-app">
+      <h1><a v-bind:href="link">Back</a></h1>
+      <hr>
+      <h1>Dynamic CSS</h1>
+      <h2>Example 1</h2>
+      <div @click="available = !available" v-bind:class="{available: available}">
+        <span>Oke</span>
+      </div>
+      <h2>Example 2</h2>
+      <button v-on:click="nearby = !nearby">Toogle Nearby</button>
+      <button @click="available = !available">Toogle Available</button>
+      <div v-bind:class="compClasses">
+        <span>Ryu</span>
+      </div>
+
+    </div>
+
+    <script src="app2.js"></script>
+  </body>
+</html>

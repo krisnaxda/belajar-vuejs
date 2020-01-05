@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belajar Vue.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+
+    <!-- vue instance -->
+    <div id="vue-app">
+      <h1>Data & Methods</h1>
+      <h3>{{ greet('Afternoon')}}</h3>
+      <p>Name : {{name}}</p>
+      <p>Job : {{job}}</p>
+
+      <hr>
+
+      <h1>Data Binding</h1>
+      <a v-bind:href="website">Netninja.com</a>
+      <input type="text" v-bind:value="name">
+      <p v-html="websiteTag"></p>
+
+      <hr>
+
+      <h1>Events</h1>
+      <!-- @click sama dengan v-on:click -->
+      <button @click="add(1)">Tambah tahun</button>
+      <button @click="subtract(1)">Kurangi tahun</button>
+      <button v-on:dblclick="add(10)">Tambah 10 Tahun</button>
+      <button v-on:dblclick="subtract(10)">Kurangi 10 Tahun</button>
+      <p>Umur saya adalah {{age}}</p>
+      <!-- @mousemove = v-on:mousemove -->
+      <div id="canvas" @mousemove="updateXY">{{ x }},{{ y }}</div>
+
+      <hr>
+
+      <h1>Events Modifier</h1>
+      <!-- modifier once sekali klik -->
+      <button @click.once="add(1)">Tambah tahun</button>
+      <p>umur saya adalah {{age}}</p>
+      <!-- @click.prevent adalah mencegah link ke href -->
+      <!-- @click.prevent="click" adalah nama methods -->
+      <a @click.prevent="click" href="http://localhost">Localhost.com</a>
+
+      <hr>
+
+      <h1>Keyboard Events</h1>
+      <label>Name</label>
+      <input type="text" @keyup.enter="logName" />
+      <label>Age</label>
+      <input type="text" @keyup.enter="logAge" />
+
+      <hr>
+
+      <h1>Two-Way Data Binding</h1>
+      <label>Nama</label>
+      <input type="text" v-model="nama" />
+      <span><p>{{nama}}</p></span>
+      <label>Umur</label>
+      <input type="text" v-model="umur" />
+      <span><p>{{umur}}</p></span>
+
+      <hr>
+
+      <h1>Computed Properties</h1>
+      <button @click="a++">Tambah A</button>
+      <button @click="b++">Tambah B</button>
+      <p>Hari = {{hari}}</p>
+      <p>A = {{a}}</p>
+      <p>B = {{b}}</p>
+      <p>Hari + A = {{ addToA }}</p>
+      <p>Hari + B = {{ addToB }}</p>
+
+    <hr>
+    <h1 v-html="lanjutan"></h1>
+    <br><br>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
