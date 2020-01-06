@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Punchbag Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+    <h1>Simple Punchbag Game - Farel</h1>
+    <a v-bind:href="kembali">Kembali</a>
+
+    <!-- Bag Image -->
+    <template v-if="!ended">
+      <div id="bag" v-bind:class="{burst:ended}" @click="punch">
+      </div>
+    </template>
+    <template v-else>
+      <div id="bag" v-bind:class="{burst:ended}">
+      </div>
+    </template>
+    <!-- <p v-else-if="">
+      <div id="bag" v-bind:class="{burst:ended}" @click="punch">
+      </div>
+    </p> -->
+      <!-- <div id="bag" v-bind:class="{burst:ended}" @click="punch">
+      </div> -->
+
+    <!-- Bag Health -->
+      <div id="bag-health">
+        <div v-bind:style="{ width:health + '%' }"></div>
+      </div>
+
+    <!-- Game Controls -->
+      <div id="controls">
+        <button @click="restart">Restart</button>
+        <!-- <button @click="punch" v-show="!ended">Punch</button> -->
+      </div>
+
+
+    </div>
+
+    <script src="app3.js"></script>
+  </body>
+</html>
