@@ -15,6 +15,14 @@
       <a v-bind:href="balik">Kembali</a> | <a v-bind:href="lanjut">Gass</a>
       <hr>
       <h2>Refs</h2>
+      <input type="text" ref="isian">
+      <button @click="bacaRefs" >Submit</button>
+      <p>Warna favorit = {{ output }}</p>
+      <div ref="test">Halo</div>
+
+      <hr>
+
+      
 
     </div>
 
