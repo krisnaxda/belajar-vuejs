@@ -5,6 +5,7 @@ new Vue({
     kembali: 'http://127.0.0.1:9000/lanjutan.html',
     health: 100,
     ended: false,
+    next: 'http://127.0.0.1:9000/lanjutan2.html'
   },
 
   methods:{

@@ -11,7 +11,8 @@
   <body>
     <!-- vue instance -->
     <div id="vue-app">
-      <h1><a v-bind:href="link">Back</a></h1>
+      <h1>Vue - Lanjutan</h1>
+      <a v-bind:href="link">Kembali</a> | <a v-html="website"></a>
       <hr>
       <h1>Dynamic CSS</h1>
       <h2>Example 1</h2>
@@ -47,7 +48,6 @@
         </div>
       </template>
       <hr>
-      <h1 v-html="website"></h1>
     </div>
 
     <script src="app2.js"></script>

@@ -5,6 +5,7 @@ new Vue({
     name: 'Shaun',
     job: 'sheep',
     website : 'http://localhost.com',
+    lanjut : 'http://127.0.0.1:9000/lanjutan.html',
     websiteTag : '<a href="127.0.0.1">webtag</a>',
     lanjutan : '<a href="lanjutan.html">Lanjutan</a>',
     age : 20,
